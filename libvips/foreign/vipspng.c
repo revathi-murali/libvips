@@ -1184,7 +1184,7 @@ vips__png_write_target( VipsImage *in, VipsTarget *target,
 		colours, Q, dither ) ) {
 		write_finish( write );
 		vips_error( "vips2png", 
-			"%s", _( "unable to write to target" ) );
+      _( "unable to write to target %s" ), vips_connection_nick( VIPS_CONNECTION( target ) ));
 		return( -1 );
 	}
 
